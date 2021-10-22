@@ -40,7 +40,7 @@ spec:
           image: {{ .Values.api.image }}:{{ default .Chart.AppVersion .Values.api.tag }}
           ports:
             - name: http
-              containerPort: 8080
+              containerPort: 5000
           readinessProbe:
             httpGet:
               path: /healthcheck
