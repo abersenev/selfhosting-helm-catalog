@@ -30,7 +30,7 @@ spec:
           - path: {{ .path }}
             backend:
               service:
-                name: {{ include "catalog.name" . }}
+                name: {{ include "catalog.name" $ }}
                 port:
                   number: {{ $.Values.api.service.port }}
           {{- end }}
