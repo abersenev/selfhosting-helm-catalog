@@ -32,7 +32,7 @@ spec:
               service:
                 name: {{ include "catalog.name" . }}
                 port:
-                  number: {{ .Values.service.port }}
+                  number: {{ $.Values.api.service.port }}
           {{- end }}
     {{- end }}
   {{- end }}
