@@ -19,7 +19,7 @@ To install the service, clone this repository and create a YAML file that will c
 ```yaml
 # Docker image
 api:
-  image: your-docker-hub/2gis/mapgl-catalog-api
+  image: your-docker-hub/2gis/catalog-api
   tag: 1.0.0
 
 # PostgreSQL access
@@ -38,7 +38,7 @@ search:
 Then, call the `helm install` command and specify the name of the created file:
 
 ```bash
-helm install mapgl . -f settings.yaml
+helm install catalog . -f settings.yaml
 ```
 
 ## Updating
@@ -46,5 +46,5 @@ helm install mapgl . -f settings.yaml
 To update the service after changing the settings or after updating the Docker image, call the `helm upgrade` command:
 
 ```bash
-helm upgrade mapgl . -f settings.yaml
+helm upgrade catalog . -f settings.yaml
 ```
